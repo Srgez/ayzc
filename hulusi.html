@@ -1,0 +1,305 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta name="applicable-device" content="pc,mobile" />
+  <meta name="robots" content="noarchive">
+  <title>虚拟乐器演奏平台</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta name="renderer" content="webkit">
+  <link href="css/global.css" rel="stylesheet" type="text/css" />
+  <link href="css/page.css" rel="stylesheet" type="text/css" />
+  <link href="css/fix.css" rel="stylesheet" type="text/css" />
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/fun.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/jquery.mChange.js"></script>
+  <style>
+    .instrument {
+      position: relative;
+      margin: auto;
+      width: fit-content;
+      top: 50px;
+    }
+
+    .bimg {
+      display: block;
+    }
+
+    .body {
+      padding-bottom: 20px;
+    }
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+      margin: auto;
+      width: fit-content;
+      top: 100px;
+    }
+
+
+    .result {
+
+      width: 1000px;
+      /* height: 900px; */
+      border: 1px solid #ccc;
+      margin: auto;
+      margin-top: 100px;
+    }
+
+    .word {
+      font-size: 30px;
+      color: black;
+      text-indent: 100px;
+      line-height: 150%;
+    }
+
+    .word2 {
+      font-size: 25px;
+      color: black;
+      text-indent: 100px;
+      line-height: 150%;
+    }
+
+    .juzhong {
+      position: relative;
+      left: 20%;
+    }
+
+    .juzhong2 {
+      position: relative;
+      left: 30%;
+    }
+
+    .juzhong3 {
+      position: relative;
+      left: 10%;
+    }
+
+    .smalltitle {
+      font-size: 40px;
+      font-weight: bold;
+      position: relative;
+      left: 40%;
+
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav_float">
+    <ul>
+      <li class="a1"><a href="">客服电话00000</a></li>
+      <li class="a2"><a href="help.html" target="_blank"></a></li>
+      <li class="a3"><a href="guide.html" target="_blank"></a></li>
+    </ul>
+  </div>
+  <div id="header">
+    <div class="logo"></div>
+    <span class="menu"></span>
+    <div class="nav_main"><a class="now" href="index.html">首页</a><a href="introduction.html">简介</a><a
+        href="instruments.html">乐器库</a><a href="guide.html">使用教程</a><a href="help.html">帮助</a></div>
+    <!-- <a href="your_download_link_here" class="download-btn">下载软件</a> -->
+  </div>
+  <script type="text/javascript">
+    $('.nav_float ul li').each(function (index, el) {
+      var c = $(this).attr('class');
+      var v = false;
+      if (c) {
+        v = '';
+        $.each(c.split(' '), function (index, val) {
+          if (val != 'widget-area') {
+            v += val + ' ';
+          }
+        });
+      }
+      if (v) {
+        $(this).removeClass(v).children('a').addClass(v);
+      }
+    });
+  </script>
+
+  <div id="body">
+    <div class="body">
+      <div>
+        <div class="instrument" class="item">
+          <img src="images/bhulusi.jpg" class="bimg">
+        </div>
+      </div>
+      <div class="instrument" class="item">
+        <img src="images/jindutiao.png" class="bimg" id="mainImage">
+      </div>
+
+      <div class="result"></div>
+
+
+      <div class="item">
+        <img src="images/kongbai.png" alt="">
+      </div>
+    </div>
+
+    <script>
+      const mainImage = document.getElementById('mainImage');
+      const resultDiv = document.querySelector('.result');
+      resultDiv.innerHTML =
+        '<br><img src="images/title111.png" class="juzhong"><div class="word">葫芦丝，又称“葫芦箫”，是云南少数民族乐器。葫芦丝的起源可追溯到先秦时期。 葫芦丝发源于德宏傣族景颇族自治州梁河县，主要流行于傣、阿昌、佤、德昂和布朗等族聚居的云南德宏、临沧地区，富有浓郁的地方色彩。常用于吹奏山歌、农曲等民间曲调。</div><div class="word">葫芦丝可分为高、中、低音三种类型。其音色独特淳朴，外观朴实、精致，简单易学，受到许多音乐爱好者的喜爱。因为葫芦丝发出的音有如抖动丝绸那样飘逸、轻柔，所以称它为葫芦丝。</div><div class="word">葫芦丝是由中原的“笙”逐渐演进、改造而来的。笙，历史久远，发源于中原，后传入西南少数民族地区。</div><div class="word">在构造上仍保持着古代乐器的遗制。其两支副管不开音孔与古箫一样，可用于发出持续的五度音程。但它的主管已开有7个音孔，与后来的箫、笛非常相似，又显示出它在历史上的激进。</div><div class="word">新中国成立后，中国民族音乐工作者对葫芦丝进行了不断的改革。1958年，云南省歌舞团首先把音域扩展为14个音。北京的一些文艺团体又制成两种新葫芦丝。其中的六孔葫芦丝，可吹奏单音、双音、单旋律加持续音及两个和音旋律加持续音。既保持了原来乐器特有的音色和风格，又增大了音量、扩展了音域、丰富了音响色彩和表现力。</div><br><br><br><br>';
+      mainImage.addEventListener('click', function (event) {
+        const imgWidth = this.width;
+        const clickX = event.offsetX;
+
+        if (clickX < imgWidth / 3) {
+          resultDiv.innerHTML =
+            '<br><img src="images/title111.png" class="juzhong"><div class="word">葫芦丝，又称“葫芦箫”，是云南少数民族乐器。葫芦丝的起源可追溯到先秦时期。 葫芦丝发源于德宏傣族景颇族自治州梁河县，主要流行于傣、阿昌、佤、德昂和布朗等族聚居的云南德宏、临沧地区，富有浓郁的地方色彩。常用于吹奏山歌、农曲等民间曲调。</div><div class="word">葫芦丝可分为高、中、低音三种类型。其音色独特淳朴，外观朴实、精致，简单易学，受到许多音乐爱好者的喜爱。因为葫芦丝发出的音有如抖动丝绸那样飘逸、轻柔，所以称它为葫芦丝。</div><div class="word">葫芦丝是由中原的“笙”逐渐演进、改造而来的。笙，历史久远，发源于中原，后传入西南少数民族地区。</div><div class="word">在构造上仍保持着古代乐器的遗制。其两支副管不开音孔与古箫一样，可用于发出持续的五度音程。但它的主管已开有7个音孔，与后来的箫、笛非常相似，又显示出它在历史上的激进。</div><div class="word">新中国成立后，中国民族音乐工作者对葫芦丝进行了不断的改革。1958年，云南省歌舞团首先把音域扩展为14个音。北京的一些文艺团体又制成两种新葫芦丝。其中的六孔葫芦丝，可吹奏单音、双音、单旋律加持续音及两个和音旋律加持续音。既保持了原来乐器特有的音色和风格，又增大了音量、扩展了音域、丰富了音响色彩和表现力。</div><br><br><br><br>';
+          // resultDiv.innerHTML = '<img src="images/ataodi.png" alt="Left Image">';
+        } else if (clickX >= imgWidth / 3 && clickX < imgWidth * 2 / 3) {
+          resultDiv.innerHTML = '<br><img src="images/title222.png" class="juzhong2"><br><br><img src="images/hulusizhifa.jpg" class="juzhong3"><br><br><br><div class="smalltitle">演奏姿势</div><br><div class="word2">身体自然站立，双脚略分开，呈外八字站稳，两腿直立，身体的重心点放在两腿之间（必要时可左右移动）。上身挺直，但不能僵硬。头部直仰，胸部自然挺起。目视正前方。双肩松弛平衡。两肘自然下垂，两臂不可夹住身体，要与腰间保持一定距离（约十厘米左右）位于身体正前方中心线。乐器与身体形成45度到50度角。</div><br><br><div class="smalltitle">&nbsp&nbsp持法</div><div class="word2">手指自然放松，成弧形持葫芦丝，双臂和肘部肌肉要放松，指肚接触孔应有周边缘感，吹奏时在气流的作用下，指肚共振，微有麻感，其音色富有弹性，过于压紧则手酸，音窒，对演奏不利。另外手指开孔时，不宜抬的过高，否则会使手指僵硬，影响演奏速度。一般手指抬到距离音孔上方2---3厘米即可。</div>';
+        } else {
+          resultDiv.innerHTML = '<video width="1000" height="600" poster="images/ahulusi.png" controls><source src="images/hulusi.mp4" type="video/mp4"></video>';
+        }
+      });
+    </script>
+
+    <script type="text/javascript">
+
+      $(window).scroll(function () {
+
+        if (scrollact(".page", 50)) {
+
+          if (!$(".page").hasClass("show")) {
+
+            $(".page").addClass("show");
+
+            setTimeout(function () {
+
+              $(".page").addClass("done");
+
+            }, 1000);
+
+          }
+
+        }
+
+      });
+
+    </script>
+    <div class="page_m"><span id="more" class="btn">点击加载更多</span></div>
+  </div>
+  </div>
+  <script>
+
+    $(function () {
+
+      var p = 2;
+
+      $(document).on('click', '#more', function () {
+
+        var tpl = 'common/text';
+
+        var url = window.location.pathname;
+
+        $.get(url, { p: p, tpl_file: tpl }, function (data) {
+
+          $('#list').append(data);
+
+        });
+
+        p++;
+
+        $.get(url, { p: p, tpl_file: tpl }, function (data) {
+
+          if (!data) {
+
+            $("#more").remove();
+
+          }
+
+        });
+
+        // setTimeout(function(){
+
+        //  $(".footer").css({"margin-top":"80px"});
+
+        // },1500);
+
+      })
+
+    })
+
+  </script>
+  </div>
+  </div>
+
+  <div id="footer">
+    <div class="block2">
+      <h1>CONTACT</h1>
+      <div class="text clearfix">
+        <div class="left d1">
+          <h3>希望虚拟乐器演奏为您带来便捷的体验！</h3>
+          <div class="p"> <span>版权所有：HIT-ayzc</span><br>
+            <!-- <span>Copyright 2010 www.4miao.net all rights reserved</span>|<a
+              href="http://www.cnzz.com/stat/website.php?web_id=1256922411" target="_blank"><span
+                id="cnzz_stat_icon_1256922411">站长统计</span></a> <a href="http://www.fractal-technology.com">深圳网站建设</a> -->
+          </div>
+        </div>
+        <div class="left d2">
+          <!-- <div class="p">ADD：XXX</div> -->
+          <!-- <div class="p">TEL：客服电话00000</div> -->
+          <a href="mailto:XXX">E-mail：SrGe.zsz@outlook.com</a>
+          <div class="p"><a href="">网站地图</a></div>
+        </div>
+        <div style="width:300px;margin:0 auto; padding:20px 0;"> <a target="_blank" href="http://beian.miit.gov.cn/"
+            style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"> <img src="images/ghs.png"
+              style="float:left;" /> <span class="p"
+              style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#fff;">赣ICP备2024044168号-1</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+
+
+
+
+
+    // 隐藏
+
+    function hideSoperson123(second) {
+
+      if (second > 0) {
+
+        second++;
+
+        setTimeout(function () {
+
+          $('.fa-plus').parent().hide();
+
+          hideSoperson123(second);
+
+        }, 1000);
+
+      }
+
+    };
+
+    hideSoperson123(1);
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta name="applicable-device" content="pc,mobile" />
+  <meta name="robots" content="noarchive">
+  <title>虚拟乐器演奏平台</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta name="renderer" content="webkit">
+  <link href="css/global.css" rel="stylesheet" type="text/css" />
+  <link href="css/page.css" rel="stylesheet" type="text/css" />
+  <link href="css/fix.css" rel="stylesheet" type="text/css" />
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/fun.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/jquery.mChange.js"></script>
+  <style>
+    .instrument {
+      position: relative;
+      margin: auto;
+      width: fit-content;
+      top: 50px;
+    }
+
+    .bimg {
+      display: block;
+    }
+
+    .body {
+      padding-bottom: 20px;
+    }
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+      margin: auto;
+      width: fit-content;
+      top: 100px;
+    }
+
+
+    .result {
+
+      width: 1000px;
+      /* height: 900px; */
+      border: 1px solid #ccc;
+      margin: auto;
+      margin-top: 100px;
+    }
+
+    .word {
+      font-size: 30px;
+      color: black;
+      text-indent: 100px;
+      line-height: 150%;
+    }
+
+    .word2 {
+      font-size: 25px;
+      color: black;
+      text-indent: 100px;
+      line-height: 150%;
+    }
+
+    .juzhong {
+      position: relative;
+      left: 20%;
+    }
+
+    .juzhong2 {
+      position: relative;
+      left: 30%;
+    }
+
+    .juzhong3 {
+      position: relative;
+      left: 10%;
+    }
+
+    .juzhong4 {
+      position: relative;
+      left: 20%;
+    }
+
+    .smalltitle {
+      font-size: 40px;
+      font-weight: bold;
+      position: relative;
+      left: 40%;
+
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav_float">
+    <ul>
+      <li class="a1"><a href="">客服电话00000</a></li>
+      <li class="a2"><a href="help.html" target="_blank"></a></li>
+      <li class="a3"><a href="guide.html" target="_blank"></a></li>
+    </ul>
+  </div>
+  <div id="header">
+    <div class="logo"></div>
+    <span class="menu"></span>
+    <div class="nav_main"><a class="now" href="index.html">首页</a><a href="introduction.html">简介</a><a
+        href="instruments.html">乐器库</a><a href="guide.html">使用教程</a><a href="help.html">帮助</a></div>
+    <!-- <a href="your_download_link_here" class="download-btn">下载软件</a> -->
+  </div>
+  <script type="text/javascript">
+    $('.nav_float ul li').each(function (index, el) {
+      var c = $(this).attr('class');
+      var v = false;
+      if (c) {
+        v = '';
+        $.each(c.split(' '), function (index, val) {
+          if (val != 'widget-area') {
+            v += val + ' ';
+          }
+        });
+      }
+      if (v) {
+        $(this).removeClass(v).children('a').addClass(v);
+      }
+    });
+  </script>
+
+  <div id="body">
+    <div class="body">
+      <div>
+        <div class="instrument" class="item">
+          <img src="images/bbianzhong.jpg" class="bimg">
+        </div>
+      </div>
+      <div class="instrument" class="item">
+        <img src="images/jindutiao.png" class="bimg" id="mainImage">
+      </div>
+
+      <div class="result"></div>
+
+
+      <div class="item">
+        <img src="images/kongbai.png" alt="">
+      </div>
+    </div>
+
+    <script>
+      const mainImage = document.getElementById('mainImage');
+      const resultDiv = document.querySelector('.result');
+      resultDiv.innerHTML =
+        '<br><img src="images/title11.png" class="juzhong"><div class="word">编钟是中国汉族古代大型打击乐器 ，编钟兴起于周朝，盛于春秋战国直至秦汉。中国是制造和使用乐钟最早的国家。它用青铜铸成，由大小不同的扁圆钟按照音调高低的次序排列起来，悬挂在一个巨大的钟架上，用丁字形的木锤和长形的棒分别敲打铜钟，能发出不同的乐音，因为每个钟的音调不同，按照音谱敲打，可以演奏出美妙的乐曲。引在木架上悬挂一组音调高低不同的铜钟，由侍女用小木槌敲打奏乐。</div><div class="word">根据文献记载和出土文物，发现中国在西周时期就有了编钟，那时候的编钟一般是由大小3枚组合起来的。春秋末期到战国时期的编钟数目就逐渐增多了，有9枚一组的和13枚一组的等等。1957年，在我国河南信阳城阳城址出土的第一套编钟13枚演奏的东方红乐曲随着我国第一颗人造卫星唱响太空。<div><br><br>';
+      mainImage.addEventListener('click', function (event) {
+        const imgWidth = this.width;
+        const clickX = event.offsetX;
+
+        if (clickX < imgWidth / 3) {
+          resultDiv.innerHTML =
+            '<br><img src="images/title11.png" class="juzhong"><div class="word">编钟是中国汉族古代大型打击乐器 ，编钟兴起于周朝，盛于春秋战国直至秦汉。中国是制造和使用乐钟最早的国家。它用青铜铸成，由大小不同的扁圆钟按照音调高低的次序排列起来，悬挂在一个巨大的钟架上，用丁字形的木锤和长形的棒分别敲打铜钟，能发出不同的乐音，因为每个钟的音调不同，按照音谱敲打，可以演奏出美妙的乐曲。引在木架上悬挂一组音调高低不同的铜钟，由侍女用小木槌敲打奏乐。</div><div class="word">根据文献记载和出土文物，发现中国在西周时期就有了编钟，那时候的编钟一般是由大小3枚组合起来的。春秋末期到战国时期的编钟数目就逐渐增多了，有9枚一组的和13枚一组的等等。1957年，在我国河南信阳城阳城址出土的第一套编钟13枚演奏的东方红乐曲随着我国第一颗人造卫星唱响太空。<div><br><br>';
+          // resultDiv.innerHTML = '<img src="images/ataodi.png" alt="Left Image">';
+        } else if (clickX >= imgWidth / 3 && clickX < imgWidth * 2 / 3) {
+          resultDiv.innerHTML = '<br><img src="images/title22.png" class="juzhong2"><br><br><br><br><img src="images/bianzhongjiegou.jpg" class="juzhong4"><br><br><br><div class="smalltitle">发声原理</div><br><div class="word2">编钟的钟体小，音调就高，音量也小；钟体大，音调就低，音量也大</div><br><br> ';
+        } else {
+          resultDiv.innerHTML = '<video width="1000" height="600" poster="images/abianzhong.jpg" controls><source src="images/bianzhong.mp4" type="video/mp4"></video>';
+        }
+      });
+    </script>
+
+    <script type="text/javascript">
+
+      $(window).scroll(function () {
+
+        if (scrollact(".page", 50)) {
+
+          if (!$(".page").hasClass("show")) {
+
+            $(".page").addClass("show");
+
+            setTimeout(function () {
+
+              $(".page").addClass("done");
+
+            }, 1000);
+
+          }
+
+        }
+
+      });
+
+    </script>
+    <div class="page_m"><span id="more" class="btn">点击加载更多</span></div>
+  </div>
+  </div>
+  <script>
+
+    $(function () {
+
+      var p = 2;
+
+      $(document).on('click', '#more', function () {
+
+        var tpl = 'common/text';
+
+        var url = window.location.pathname;
+
+        $.get(url, { p: p, tpl_file: tpl }, function (data) {
+
+          $('#list').append(data);
+
+        });
+
+        p++;
+
+        $.get(url, { p: p, tpl_file: tpl }, function (data) {
+
+          if (!data) {
+
+            $("#more").remove();
+
+          }
+
+        });
+
+        // setTimeout(function(){
+
+        //  $(".footer").css({"margin-top":"80px"});
+
+        // },1500);
+
+      })
+
+    })
+
+  </script>
+  </div>
+  </div>
+
+  <div id="footer">
+    <div class="block2">
+      <h1>CONTACT</h1>
+      <div class="text clearfix">
+        <div class="left d1">
+          <h3>希望虚拟乐器演奏为您带来便捷的体验！</h3>
+          <div class="p"> <span>版权所有：HIT-ayzc</span><br>
+            <!-- <span>Copyright 2010 www.4miao.net all rights reserved</span>|<a
+              href="http://www.cnzz.com/stat/website.php?web_id=1256922411" target="_blank"><span
+                id="cnzz_stat_icon_1256922411">站长统计</span></a> <a href="http://www.fractal-technology.com">深圳网站建设</a> -->
+          </div>
+        </div>
+        <div class="left d2">
+          <!-- <div class="p">ADD：XXX</div> -->
+          <!-- <div class="p">TEL：客服电话00000</div> -->
+          <a href="mailto:XXX">E-mail：SrGe.zsz@outlook.com</a>
+          <div class="p"><a href="">网站地图</a></div>
+        </div>
+        <div style="width:300px;margin:0 auto; padding:20px 0;"> <a target="_blank" href="http://beian.miit.gov.cn/"
+            style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"> <img src="images/ghs.png"
+              style="float:left;" /> <span class="p"
+              style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#fff;">赣ICP备2024044168号-1</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+
+
+
+
+
+    // 隐藏
+
+    function hideSoperson123(second) {
+
+      if (second > 0) {
+
+        second++;
+
+        setTimeout(function () {
+
+          $('.fa-plus').parent().hide();
+
+          hideSoperson123(second);
+
+        }, 1000);
+
+      }
+
+    };
+
+    hideSoperson123(1);
+
+  </script>
+</body>
+
+</html>

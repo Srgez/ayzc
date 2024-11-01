@@ -1,0 +1,435 @@
+﻿<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta name="applicable-device" content="pc,mobile" />
+  <meta name="robots" content="noarchive">
+  <title>虚拟乐器演奏平台</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta name="renderer" content="webkit">
+  <link href="css/global.css" rel="stylesheet" type="text/css" />
+  <link href="css/page.css" rel="stylesheet" type="text/css" />
+  <link href="css/fix.css" rel="stylesheet" type="text/css" />
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/fun.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/jquery.mChange.js"></script>
+
+  <style>
+    .search-container {
+      position: relative;
+      display: flex;
+      /* justify-content: center; */
+      left: 5%;
+      top: 3%;
+      /* align-items: center; */
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      /* 原来的 3 倍 */
+      border: 2px solid rgb(63, 142, 142);
+      /* 原来的 3 倍 */
+      border-radius: 50px;
+      /* 原来的 3 倍 */
+      width: 650px;
+      /* 原来的 3 倍 */
+      outline: none;
+      font-size: 32px;
+      top: 0;
+      /* 可以根据需要调整字体大小 */
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 55%;
+      /* 原来的 3 倍 */
+      top: 48%;
+      transform: translateY(-50%);
+      color: rgb(63, 142, 142);
+      font-size: 48px;
+      /* 可以根据需要调整图标大小 */
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="nav_float">
+    <ul>
+      <li class="a1"><a href="">客服电话00000</a></li>
+      <li class="a2"><a href="help.html" target="_blank"></a></li>
+      <li class="a3"><a href="guide.html" target="_blank"></a></li>
+    </ul>
+  </div>
+
+  <div id="header">
+    <div class="logo"></div>
+    <span class="menu"></span>
+    <div class="nav_main"><a class="now" href="index.html">首页</a><a href="introduction.html">简介</a><a
+        href="instruments.html">乐器库</a><a href="guide.html">使用教程</a><a href="help.html">帮助</a>
+    </div>
+    <!-- <div class="tel">客服电话00000</div> -->
+  </div>
+
+  <script type="text/javascript">
+    $('.nav_float ul li').each(function (index, el) {
+      var c = $(this).attr('class');
+      var v = false;
+      if (c) {
+        v = '';
+        $.each(c.split(' '), function (index, val) {
+          if (val != 'widget-area') {
+            v += val + ' ';
+          }
+        });
+      }
+      if (v) {
+        $(this).removeClass(v).children('a').addClass(v);
+      }
+    });
+  </script>
+
+  <div id="focus">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="请输入乐器名称...">
+      <span class="search-icon">&#128269;</span>
+    </div>
+    <br><br>
+    <div class="frame">
+      <!-- <div class="child imgbg" psrc="images/s5c80d2e067f07.jpg" msrc="images/s5c80d2e067f07.jpg"></div>
+      <div class="child imgbg" psrc="images/s5ad6fb6d74e14.jpg" msrc="images/s5ad6fb6d74e14.jpg"></div>
+      <div class="child imgbg" psrc="images/s5ad6fb8841fbc.jpg" msrc="images/s5ad6fb8841fbc.jpg"></div> -->
+
+      <div class="child imgbg" psrc="images/abcd.png" msrc="images/abcd.png"></div>
+      <div class="child imgbg" psrc="images/abcdd.png" msrc="images/abcdd.png"></div>
+      <div class="child imgbg" psrc="images/abcddd.png" msrc="images/abcddd.png"></div>
+    </div>
+    <div class="nav"></div>
+
+  </div>
+
+
+
+  <script>
+    // 获取输入框元素
+    const searchInput = document.getElementById('searchInput');
+
+    // 为输入框添加事件监听器，当输入框失去焦点时触发
+    searchInput.addEventListener('blur', function () {
+      if (this.value === '陶笛') {
+        // 如果输入内容为“陶笛”，则跳转到指定页面（这里假设跳转到 taoDi.html）
+        window.location.href = 'taodi.html';
+      }
+      if (this.value === '葫芦丝') {
+        // 如果输入内容为“陶笛”，则跳转到指定页面（这里假设跳转到 taoDi.html）
+        window.location.href = 'hulusi.html';
+      }
+      if (this.value === '编钟') {
+        // 如果输入内容为“陶笛”，则跳转到指定页面（这里假设跳转到 taoDi.html）
+        window.location.href = 'bianzhong.html';
+      }
+    });
+  </script>
+
+
+  <!-- <div id="body">
+    <div class="index1 screen">
+      <div class="list">
+        <div class="item"><a href="Taodi.html" target="_blank" style="background-image:url(images/pic27.jpg);"></a>
+        </div>
+        <div class="item"><a href="Hulusi.html" target="_blank" style="background-image:url(images/pic28.jpg);"></a>
+        </div>
+        <div class="item"><a href="caseshow.html" target="_blank" style="background-image:url(images/pic29.jpg);"></a>
+        </div>
+        <div class="item"><a href="caseshow.html" target="_blank" style="background-image:url(images/pic30.jpg);"></a>
+        </div>
+        <div class="item"><a href="caseshow.html" target="_blank" style="background-image:url(images/pic31.jpg);"></a>
+        </div>
+        <div class="item"><a href="caseshow.html" target="_blank" style="background-image:url(images/pic32.jpg);"></a>
+        </div>
+        <div class="item"><a href="caseshow.html" target="_blank" style="background-image:url(images/pic33.jpg);"></a>
+        </div>
+        <div class="item"><a href="caseshow.html" target="_blank" style="background-image:url(images/pic34.jpg);"></a>
+        </div>
+        <div class="item"><a href="caseshow.html" target="_blank" style="background-image:url(images/pic35.jpg);"></a>
+        </div>
+        <div class="item"><a href="caseshow.html" target="_blank" style="background-image:url(images/pic36.jpg);"></a>
+        </div>
+        <div class="item"><a href="caseshow.html" target="_blank" style="background-image:url(images/pic37.jpg);"></a>
+        </div>
+        <div class="item"><a href="caseshow.html" target="_blank" style="background-image:url(images/pic38.jpg);"></a>
+        </div>
+      </div>
+    </div> -->
+  </script>
+
+  <div class="news">
+    <div class="block">
+      <div id="list" class="list">
+        <div class="item">
+          <div class="date"><span></span><strong>1</strong></div>
+          <div class="pic"><a target="_blank"><img src="images/s5ce3ac6678f58.jpg"></a></div>
+          <h1><a target="_blank">虚拟乐器演奏平台</a></h1>
+          <div class="date2"></div>
+
+          <p>
+            项目基于多模态人机交互交互技术来搭建虚拟乐器演奏平台。项目搭建网站，用户可在网站上任意选择陶笛、葫芦丝、编钟等乐器。用户能够突破传统乐器演奏的实体限制，不需要实体乐器，仅仅需要在摄像头、麦克风等多模态信息采集下做出演奏动作即可实现演奏效果。
+          </p>
+        </div>
+        <div class="item">
+          <div class="date"><span></span><strong>2</strong></div>
+          <div class="pic"><a target="_blank"><img src="images/s5ce3abf782a0f_1015_607_6_0.jpg"></a></div>
+          <h1><a target="_blank">互联网+乐器</a></h1>
+          <div class="date2"></div>
+          <p>
+            人工智能技术和智能制造方式，令乐器生产及产品本身都发生了深刻变革。智能乐器的快速崛起为乐器产业升级打开了一扇窗，然而乐器始终是需要文化传承的，传统的乐器制造业需要拥抱新科技。随着科学技术的发展，信息结构、用户体验逐步向数字化转型。信息数字化后有利于长期保存，也为后期的开发提供了广泛空间。例如，湖北省博物馆将文物信息数字化，在全国率先实现5G网络全馆覆盖，并且推出了乐·兵VR体验利用全息投影互动技术，在互动区模拟敲击，观众可听到真正来自曾侯乙编钟的声音。殊途同归，项目搭建的虚拟乐器演奏平台同样可以储存乐器信息并长久保存，有利于乐器的改良发展。
+          </p>
+        </div>
+        <div class="item">
+          <div class="date"><span></span><strong>3</strong></div>
+          <div class="pic"><a target="_blank"><img src="images/s5cd55130867d7_575_342_10_0.jpg"></a></div>
+          <h1><a target="_blank">多模态人机交互技术</a></h1>
+          <div class="date2"></div>
+          <p>多模态人机交互旨在利用语音、图像、文本、眼 动和触觉等多模态信息进行人与计算机之间的信息 交换。 其中包括人到计算机的多模态信息输入与计 算机到人的多模态信息呈现,是与认知心理学、人机
+            工程学、多媒体技术和虚拟现实技术等密切相关的 综合学科。 目前,多模态人机交互与图像图形领域 中的各类学术和技术联合得越来越紧密。<br> 多模态人 机交互技术作为人—机—物的技术载体,在大数据
+            与人工智能时代,其学术和技术发展前沿与图像图 形学、人工智能、情感计算、生理心理评估、互联网大 数据、办公教育和医疗康复等领域发展息息相关。</p>
+        </div>
+        <div class="item">
+          <div class="date"><strong>4</strong></div>
+          <div class="pic"><a target="_blank"><img src="images/s5cd531d85369c_1190_709_0_0.jpg"></a></div>
+          <h1><a target="_blank">Media Pipe技术</a></h1>
+          <div class="date2"></div>
+          <p>
+            MediaPipe是由Google开发的开源机器学习框架，旨在简化计算机视觉和媒体处理任务的开发。它提供了一种可扩展的方法来处理视觉数据，包括图像和视频，并可以在多种平台上运行，包括Android、iOS、Linux和Windows。
+          </p>
+        </div>
+        <div class="item">
+          <div class="date"><strong>5</strong></div>
+          <div class="pic"><a target="_blank"><img src="images/s5cd52f5345ceb_1269_758_110_0.png"></a></div>
+          <h1><a target="_blank">Leap Motion手势感应器</a></h1>
+          <div class="date2"></div>
+          <p>Leap
+            Motion是面向PC以及Mac的体感控制器制造公司Leap于2013年2月27日发布的体感控制器，5月13日正式上市，随后于5月19日在美国零售商百思买独家售卖。2013年7月22日发布的新版Leap
+            Motion已经开始派送，新版的Leap Motion将具有更高的软硬件结合能力。</p>
+        </div>
+
+      </div>
+
+      <script type="text/javascript">
+
+        $(window).scroll(function () {
+
+          if (scrollact(".page", 50)) {
+
+            if (!$(".page").hasClass("show")) {
+
+              $(".page").addClass("show");
+
+              setTimeout(function () {
+
+                $(".page").addClass("done");
+
+              }, 1000);
+
+            }
+
+          }
+
+        });
+
+      </script>
+      <div class="page_m"><span id="more" class="btn">点击加载更多</span></div>
+    </div>
+  </div>
+  <script>
+
+    $(function () {
+
+      var p = 2;
+
+      $(document).on('click', '#more', function () {
+
+        var tpl = 'common/text';
+
+        var url = window.location.pathname;
+
+        $.get(url, { p: p, tpl_file: tpl }, function (data) {
+
+          $('#list').append(data);
+
+        });
+
+        p++;
+
+        $.get(url, { p: p, tpl_file: tpl }, function (data) {
+
+          if (!data) {
+
+            $("#more").remove();
+
+          }
+
+        });
+
+        // setTimeout(function(){
+
+        //  $(".footer").css({"margin-top":"80px"});
+
+        // },1500);
+
+      })
+
+    })
+
+  </script>
+  </div>
+  </div>
+
+
+
+  <div id="footer">
+    <div class="block2">
+      <h1>CONTACT</h1>
+      <div class="text clearfix">
+        <div class="left d1">
+          <h3>希望虚拟乐器演奏为您带来便捷的体验！</h3>
+          <div class="p"> <span>版权所有：HIT-ayzc</span><br>
+            <!-- <span>Copyright 2010 www.4miao.net all rights reserved</span>|<a
+              href="http://www.cnzz.com/stat/website.php?web_id=1256922411" target="_blank"><span
+                id="cnzz_stat_icon_1256922411">站长统计</span></a> <a href="http://www.fractal-technology.com">深圳网站建设</a> -->
+          </div>
+        </div>
+        <div class="left d2">
+          <!-- <div class="p">ADD：XXX</div> -->
+          <!-- <div class="p">TEL：客服电话00000</div> -->
+          <a href="mailto:XXX">E-mail：SrGe.zsz@outlook.com</a>
+          <div class="p"><a href="">网站地图</a></div>
+        </div>
+        <div style="width:300px;margin:0 auto; padding:20px 0;"> <a target="_blank" href="http://beian.miit.gov.cn/"
+            style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"> <img src="images/ghs.png"
+              style="float:left;" /> <span class="p"
+              style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#fff;">赣ICP备2024044168号-1</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+
+    $(function () {
+      showlayer('.layer1');
+      $(".layer .close").click(function () {
+        hidelayer('.layer1');
+        setTimeout(function () {
+          showlayer('.layer1');
+        }, 10000)
+      })
+      if ($(window).width() < 640) {
+        hidelayer('.layer1');
+      }
+      if ($(window).width() > 640) {
+        $("#focus").height($(window).height());
+      }
+    });
+    //autowindow();
+
+    var navs = [];
+    $("#focus .frame .child").each(function (index, el) {
+      navs.push('<i></i>');
+    });
+    if (navs.length > 0) {
+      $("#focus .nav")
+        .append(navs.join(''))
+        .prepend('<a href="javascript:void(0);" class="prev"></a>')
+        .append('<a href="javascript:void(0);" class="next"></a>');
+    }
+
+    $(".index1 .list").hover(
+      function () {
+        $(".index1 .list .item").addClass("s");
+      },
+      function () {
+        $(".index1 .list .item").removeClass("s");
+      }
+    );
+    $(".index1 .list .item").hover(
+      function () {
+        $(this).addClass("ss");
+      },
+      function () {
+        $(this).removeClass("ss");
+      }
+    );
+
+
+    $("#focus .frame .child").mChange({
+      auto: 1,       //是否自动播放,1为自动,0为手动
+      arrow: 1,       //是否反转箭头,1为点击左侧向右滚动,0则相反
+      speed: 500,     //效果速度,大于0.3
+      time: 4000,    //周期时间，大于1
+      nav: $("#focus .nav i"),    //导航
+      nave: "click", //导航事件
+      navs: 0,  //导航滚动
+      prev: $("#focus .prev"),    //上一个
+      next: $("#focus .next"),    //下一个
+      cycle: 1,       //是否循环
+      mousestop: 0,   //是否鼠标划入停止
+      mousewheel: 0,  //是否开启滚轮事件
+      animates: function (idx) {
+        $("#focus .frame .child").removeClass("show");
+        $("#focus .frame .child").eq(idx).addClass("show");
+      } //自定义函数
+    });
+
+
+    var x = new Array(50, 50, 50, 50, 0, 0, 0);
+    $(window).scroll(function () {
+      $(".screen").each(function (index, element) {
+        if (scrollact($(this), x[index])) {
+          if (!$(this).hasClass("show")) {
+            $(this).addClass("show");
+            if (index == 1) {
+              setTimeout(function () {
+                $(".index2 .inner div").css({ "-webkit-transition-delay": "0s", "transition-delay": "0s" }).addClass("s");
+              }, 1000);
+            }
+          }
+        }
+      });
+    });
+
+
+    tabdiv(".index3 .tabs a", ".index3 .list", "click", 500);
+    $(".index3 .tabs a:first").click();
+  </script>
+  <!-- // 隐藏
+function hideSoperson123(second){
+if(second>0){
+second++;
+setTimeout(function(){
+$('.fa-plus').parent().hide();
+hideSoperson123(second);
+},1000);
+}
+};
+hideSoperson123(1);
+ -->
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta name="applicable-device" content="pc,mobile" />
+  <meta name="robots" content="noarchive">
+  <title>虚拟乐器演奏平台</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta name="renderer" content="webkit">
+  <link href="css/global.css" rel="stylesheet" type="text/css" />
+  <link href="css/page.css" rel="stylesheet" type="text/css" />
+  <link href="css/fix.css" rel="stylesheet" type="text/css" />
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/fun.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/jquery.mChange.js"></script>
+  <style>
+    .ccontainer {
+      position: relative;
+      width: auto;
+      height: auto;
+      top: 100px;
+      border-top-style: solid;
+    }
+
+    .lleft {
+      position: relative;
+      width: 10%;
+      height: 3000px;
+      /* background-color: aquamarine; */
+      float: left;
+      left: 5%;
+      /* border-right-style: dotted;
+      border-left-style: dotted;
+      border-bottom-style: dotted; */
+
+    }
+
+    .rright {
+      position: relative;
+      height: auto;
+      width: 85%;
+      /* background-color: brown; */
+      left: 15%;
+      border-right-style: dotted;
+      border-bottom-style: dotted;
+      /* border-left-style: dotted; */
+      font-weight: 500;
+      background-color: rgb(246, 248, 251);
+
+    }
+
+    .mulu {
+      /* background-color: mediumturquoise; */
+      width: 100%;
+      height: auto;
+      /* padding: 3px; */
+      font-size: 20px;
+      text-align: center;
+      background-color: rgb(63, 142, 142);
+      font-weight: 500;
+      /* border-bottom-style: dotted; */
+      color: #fff;
+    }
+
+    .welcome {
+      color: rgb(63, 142, 142);
+      font-size: 35px;
+      font-weight: 600;
+      text-shadow: 2px;
+    }
+
+    .title {
+      width: 100%;
+      height: 6%;
+      color: rgb(2, 19, 37);
+      font-size: 40px;
+      font-weight: 900;
+    }
+
+    .title2 {
+      width: 100%;
+      color: rgb(0, 8, 15);
+      font-size: 25px;
+      font-weight: 550;
+    }
+
+    .title3 {
+      width: 100%;
+      color: rgb(0, 8, 15);
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .zhengchang {
+      line-height: 180%;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      color: black;
+    }
+
+    a:hover {
+      color: #81c1e9;
+    }
+
+    a:active {
+      color: #032839;
+    }
+
+    .border {
+      border-color: rgb(197, 239, 225);
+      border-width: 10px;
+      border-style: groove;
+    }
+
+    .centerr {
+      text-align: center;
+    }
+
+    .butt {
+      width: 50x;
+      height: 60px;
+      background-color: rgb(63, 142, 142);
+      border: none;
+      color: #fff;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav_float">
+    <ul>
+      <li class="a1"><a href="">客服电话00000</a></li>
+      <li class="a2"><a href="help.html" target="_blank"></a></li>
+      <li class="a3"><a href="guide.html" target="_blank"></a></li>
+    </ul>
+  </div>
+
+  <div id="header">
+    <div class="logo"></div>
+    <span class="menu"></span>
+    <div class="nav_main"><a class="now" href="index.html">首页</a><a href="introduction.html">简介</a><a
+        href="instruments.html">乐器库</a><a href="guide.html">使用教程</a><a href="help.html">帮助</a>
+    </div>
+    <!-- <div class="tel">客服电话00000</div> -->
+  </div>
+
+  <script type="text/javascript">
+    $('.nav_float ul li').each(function (index, el) {
+      var c = $(this).attr('class');
+      var v = false;
+      if (c) {
+        v = '';
+        $.each(c.split(' '), function (index, val) {
+          if (val != 'widget-area') {
+            v += val + ' ';
+          }
+        });
+      }
+      if (v) {
+        $(this).removeClass(v).children('a').addClass(v);
+      }
+    });
+  </script>
+
+  <div class="ccontainer">
+    <div class="lleft">
+      <br>
+      <div class="welcome">欢迎下载爱乐智呈
+        <hr>
+      </div>
+
+
+      <div class="mulu">
+
+        <a href="guide.html">平台介绍</a>
+        <br>
+      </div>
+      <br>
+      <div class="mulu">
+
+        <a href="wind.html">虚拟吹奏乐下载</a>
+        <br>
+      </div>
+      <br>
+      <div class="mulu">
+
+        <a href="percussion.html">虚拟打击乐下载</a>
+        <br>
+      </div>
+    </div>
+    <div class="rright">
+      <br><br><br><br>
+      <div class="title">虚拟吹奏乐器演奏
+        &nbsp&nbsp&nbsp&nbsp<button class="butt"><a href="samle.xlsx">点击下载吹奏乐器</a></button>
+      </div>
+
+      <br><br><br><br>
+      <hr>
+      <br>
+      <div class="title2">有哪些吹奏乐？</div>
+      <br>
+      <div class="zhengchang">&nbsp;&nbsp;&nbsp;目前平台实现的吹奏乐有陶笛、葫芦丝和埙。</div>
+      <br>
+      <div class="title2">如何使用？</div>
+      <br>
+      <div class="zhengchang">
+        &nbsp;&nbsp;&nbsp;• &nbsp;依据readme.md文件运行程序进入软件<br>
+        &nbsp;&nbsp;&nbsp;• &nbsp;进行吹奏乐的虚拟演奏需要摄像头与麦克风的使用权限，请打开设备的摄像头与麦克风。<br>
+        &nbsp;&nbsp;&nbsp;• &nbsp;吹奏乐器通常由带孔的管状组成，以气流吹入管中引起管柱震动发声，演奏者演奏时通过手指封堵不同组合的键孔改变声音的音调，
+        实现音乐效果。你需要将双手展示在摄像头前，做出演奏手势，通过改变手势模拟封堵键孔组合的操作。<br>
+        &nbsp;&nbsp;&nbsp;• &nbsp;乐器发声需要一定声音强度，如果想使虚拟乐器发声时请对准麦克风大声吹气。
+      </div>
+      <br>
+      <div class="title2">以葫芦丝为例展示使用流程</div>
+      <div class="title3"><br>整体效果展示<br></div>
+      <div class="centerr"><img src="images/zhengti.png" alt=""></div>
+      <br>
+      <div class="title3">一、吹气模拟</div>
+      <br>
+      <div class="zhengchang">用户进行虚拟乐器演奏时，需要对准麦克风吹气，
+        以模拟真实乐器吹奏的感觉。为帮助用户实时监控系统的音量采样，
+        软件窗口左侧设置了一个音量检测曲线显示区域，记录最近3秒内的音量变化。
+        当音量超过小窗口中的红线时，系统会判定用户进行了吹气操作。和真实吹奏乐器类似，只
+        有当用户吹气后，乐器才能根据演奏指法发出对应音调的乐声。下面是吹气音量检测曲线。</div>
+      <div class="centerr"><img src="images/chuiqi.png" alt=""></div>
+      <br>
+      <br>
+      <div class="title3">二、指法模拟</div>
+      <br>
+      <div class="zhengchang">在手势检测过程中，系统会对手部关键点进行描绘，用户可以直观看到手势检测是否正常
+        工作及其工作时是否准确。指尖位置会显示圆形图案：全黑色表示乐器键孔被手指堵住，处于封闭状态；中间为白
+        色则表示键孔开放。这种视觉反馈帮助用户确认每个按键的状态，从而确保演奏的准确性。</div>
+      <div class="centerr"><img src="images/zhifa.png" alt=""></div>
+      <br>
+      <br>
+      <div class="title3">三、演奏效果</div>
+      <br>
+      <div class="zhengchang">用户不仅能够通过耳机或音响实时听到系统合成的音乐，还可以在软件界面的上部观察到具象化
+        的演奏效果。该系统能够准确反映每一段手势的调整和每一次键孔的变化，呈现出这些变化如何与吹气节奏相互交织。</div>
+      <div class="centerr"><img src="images/xiaoguo.png" alt=""></div>
+      <br>
+      <br>
+      <div class="title3">四、指法指导</div>
+      <br>
+      <div class="zhengchang">软件窗口的左下角不仅展示了用户导入的乐谱，还提供了系统根据乐谱生成的
+        指法指导图片。这些指导图片详细地展示了每个音符所需的手势
+        <div class="centerr"><img src="images/zhidao.png" alt=""></div>
+        <br>
+
+      </div>
+    </div>
+
+    <br><br><br><br>
+    <div id="footer">
+      <div class="block2">
+        <h1>CONTACT</h1>
+        <div class="text clearfix">
+          <div class="left d1">
+            <h3>希望虚拟乐器演奏为您带来便捷的体验！</h3>
+            <div class="p"> <span>版权所有：HIT-ayzc</span><br>
+              <!-- <span>Copyright 2010 www.4miao.net all rights reserved</span>|<a
+                href="http://www.cnzz.com/stat/website.php?web_id=1256922411" target="_blank"><span
+                  id="cnzz_stat_icon_1256922411">站长统计</span></a> <a href="http://www.fractal-technology.com">深圳网站建设</a> -->
+            </div>
+          </div>
+          <div class="left d2">
+            <!-- <div class="p">ADD：XXX</div> -->
+            <!-- <div class="p">TEL：客服电话00000</div> -->
+            <a href="mailto:XXX">E-mail：SrGe.zsz@outlook.com</a>
+            <div class="p"><a href="">网站地图</a></div>
+          </div>
+          <div style="width:300px;margin:0 auto; padding:20px 0;"> <a target="_blank" href="http://beian.miit.gov.cn/"
+              style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"> <img src="images/ghs.png"
+                style="float:left;" /> <span class="p"
+                style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#fff;">赣ICP备2024044168号-1</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+
+      $(function () {
+        showlayer('.layer1');
+        $(".layer .close").click(function () {
+          hidelayer('.layer1');
+          setTimeout(function () {
+            showlayer('.layer1');
+          }, 10000)
+        })
+        if ($(window).width() < 640) {
+          hidelayer('.layer1');
+        }
+        if ($(window).width() > 640) {
+          $("#focus").height($(window).height());
+        }
+      });
+      //autowindow();
+
+      var navs = [];
+      $("#focus .frame .child").each(function (index, el) {
+        navs.push('<i></i>');
+      });
+      if (navs.length > 0) {
+        $("#focus .nav")
+          .append(navs.join(''))
+          .prepend('<a href="javascript:void(0);" class="prev"></a>')
+          .append('<a href="javascript:void(0);" class="next"></a>');
+      }
+
+      $(".index1 .list").hover(
+        function () {
+          $(".index1 .list .item").addClass("s");
+        },
+        function () {
+          $(".index1 .list .item").removeClass("s");
+        }
+      );
+      $(".index1 .list .item").hover(
+        function () {
+          $(this).addClass("ss");
+        },
+        function () {
+          $(this).removeClass("ss");
+        }
+      );
+
+
+      $("#focus .frame .child").mChange({
+        auto: 1,       //是否自动播放,1为自动,0为手动
+        arrow: 1,       //是否反转箭头,1为点击左侧向右滚动,0则相反
+        speed: 500,     //效果速度,大于0.3
+        time: 4000,    //周期时间，大于1
+        nav: $("#focus .nav i"),    //导航
+        nave: "click", //导航事件
+        navs: 0,  //导航滚动
+        prev: $("#focus .prev"),    //上一个
+        next: $("#focus .next"),    //下一个
+        cycle: 1,       //是否循环
+        mousestop: 0,   //是否鼠标划入停止
+        mousewheel: 0,  //是否开启滚轮事件
+        animates: function (idx) {
+          $("#focus .frame .child").removeClass("show");
+          $("#focus .frame .child").eq(idx).addClass("show");
+        } //自定义函数
+      });
+
+
+      var x = new Array(50, 50, 50, 50, 0, 0, 0);
+      $(window).scroll(function () {
+        $(".screen").each(function (index, element) {
+          if (scrollact($(this), x[index])) {
+            if (!$(this).hasClass("show")) {
+              $(this).addClass("show");
+              if (index == 1) {
+                setTimeout(function () {
+                  $(".index2 .inner div").css({ "-webkit-transition-delay": "0s", "transition-delay": "0s" }).addClass("s");
+                }, 1000);
+              }
+            }
+          }
+        });
+      });
+
+
+      tabdiv(".index3 .tabs a", ".index3 .list", "click", 500);
+      $(".index3 .tabs a:first").click();
+    </script>
+    <!-- // 隐藏
+function hideSoperson123(second){
+if(second>0){
+second++;
+setTimeout(function(){
+$('.fa-plus').parent().hide();
+hideSoperson123(second);
+},1000);
+}
+};
+hideSoperson123(1);
+ -->
+    </script>
+
+</body>
+
+</html>
